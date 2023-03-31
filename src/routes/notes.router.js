@@ -1,9 +1,8 @@
 import {Router} from "express";
+import {methods as notesController} from "./../controllers/notes.controller"
 
 const router=Router();
 
-router.get("/",(request, response) =>{
-    response.send("Hola este es mi primer endpoint get")
-});
+router.get("/",notesController.getNotes);
 
 export default router;

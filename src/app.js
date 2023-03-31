@@ -16,7 +16,7 @@ app.set("port",4000);
 app.use(morgan("dev"));
 
 //Routes 
-app.use(notesRoutes);
+app.use("/api/notes",notesRoutes);
 
 
 export default app;
