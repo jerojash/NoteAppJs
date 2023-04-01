@@ -16,6 +16,7 @@ app.set("port",4000);
 app.use(morgan("dev"));
 
 //Routes 
+app.use("/api-docs",require("./routes/api/api-docs"));
 app.use("/api/notes",notesRoutes);
 
 
