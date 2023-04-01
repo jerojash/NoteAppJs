@@ -14,6 +14,7 @@ app.set("port",4000);
 //Middlewares 
 //Funciones intermedias entre una peticion y una respuesta
 app.use(morgan("dev"));
+app.use(express.json());
 
 //Routes 
 app.use("/api-docs",require("./routes/api/api-docs"));

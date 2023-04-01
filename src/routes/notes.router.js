@@ -40,5 +40,6 @@ const router=Router();
  *         createdAt: 2020-03-10T04:05:06.157Z
  */
 router.get("/",notesController.getNotes);
+router.post("/",notesController.addNote);
 
 export default router;

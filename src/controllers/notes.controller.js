@@ -16,6 +16,21 @@ const getNotes = async (req,res)=>{
     
 }
 
+const addNote=async (req,res)=>{
+    try {
+        const {id_user, title, body} = req.body;
+        const connection = await getConnection();
+        const result = await connection.query("INSERT INTO note (id_user,title,body) values ("+id_user+",'"+title+"','"+body+"')");
+         res.json("addNote");
+    } catch (error) {
+        res.status(500);
+        res.send(error.message);
+    }
+
+    
+}
+
 export const methods= {
-    getNotes
+    getNotes,
+    addNote
 };
